@@ -1,5 +1,5 @@
 
-document.onload(()=>{
+$(document).ready(()=>{
     searchButtonClicked();
 })
 
