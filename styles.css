@@ -1,0 +1,86 @@
+*{
+    font-family: 'DM Sans', sans-serif;
+}
+html, body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.search-wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    box-shadow: 0 5px 10px 10px rgba(0, 0, 0, 0.027);
+    backdrop-filter: blur(60px);
+    transition: 0.5s;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.507);
+}
+
+.search-wrapper input{
+    outline: none;
+    border : none;
+    padding: 10px;
+    margin : 0;
+    border-radius: 20px 0 0 20px;
+    padding: 20px;
+    background: rgb(246, 237, 255);
+    font-size: 15px;
+}
+
+.search-wrapper button{
+    background: blueviolet;
+    outline: none;
+    border : none;
+    padding: 20px;
+    border-radius: 0 20px 20px 0;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+#usersList{
+    display: block;
+    width: 100%;
+    float: left;
+    text-align: center;
+    padding-top : 150px;
+}
+
+.user-view{
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    width : 100%;
+    max-width: 300px;
+    margin: 20px;
+    box-shadow : 0 0 20px 20px rgba(128, 128, 128, 0.062);
+    border-radius: 20px;
+    padding: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.user-view:hover{
+    transform:  scale(1.05);
+}
+
+.user-view img{
+width : 100px;
+height: 100px;
+border-radius: 20px;
+overflow: hidden;
+}
+
+.user-view p {
+    margin: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color : rgb(61, 61, 61)
+}
