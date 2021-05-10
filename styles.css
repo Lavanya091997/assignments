@@ -43,6 +43,7 @@ html, body{
     color: white;
     cursor: pointer;
     font-size: 15px;
+    margin: 0;
 }
 
 #usersList{
