@@ -1,6 +1,14 @@
 
-document.onload(()=>{
-    searchButtonClicked();
+$(document).ready(()=>{
+    getData("");
+    
+    $('#searchInput').keypress(function (e) {
+        var key = e.which;
+        if(key == 13) 
+         {
+           searchButtonClicked();
+         }
+       });   
 })
 
 function searchButtonClicked(){
@@ -31,13 +39,11 @@ function onDataLoad(){
 function populateUserView(users){
 
     $("#usersList").html("");
-    for(var i = 0; i < users.length-1 ; i++){
+    for(var i = 0; i < users.length ; i++){
 
         $("#usersList").append(
-            $(getUserView(users[i])).click(()=>{openUrl(users[i].html_url)})
-            );
-
-    }
+            $(getUserView(users[i])).attr('onclick',"openUrl('" + users[i].html_url + "')"));
+        }
 
 }
 
@@ -46,7 +52,6 @@ function getUserView(user){
 }
 
 function openUrl(url){
-    console.log(url);
     window.open(url);
 }
 
